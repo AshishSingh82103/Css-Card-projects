@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Work Sans", sans-serif;
+}
+html {
+	/* 1rem = 10px */
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+body {
+	overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Poppins", sans-serif;
+}
+h1 {
+	color: rgb(0, 10, 45);
+	font-size: 6rem;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+p {
+	color: #444;
+	line-height: 1.6;
+	font-size: 1.7rem;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* ? reusable code */
+.section {
+	padding: 9rem 0;
+}
+.section-heading {
+	font-size: 5rem;
+	font-weight: 600;
+	margin-bottom: 6rem;
+	text-transform: capitalize;
+}
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+}
+.grid {
+	display: grid;
+	gap: 5rem;
+}
+.grid-template {
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* ================================================================
+   !                    NAVBAR SECTION
+=================================================================== */
+
+#header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 4rem;
+	height: 7rem;
+	background-color: #ffffff;
+}
+#header .logo {
+	height: 4rem;
+	cursor: pointer;
+}
+#header .logo a {
+	color: crimson;
+	font-size: 3.5rem;
+	font-weight: 400;
+	/* background-color: #fff; */
+	padding-inline: 1rem;
+	border: none;
+	border-radius: 0.2rem;
+}
+.navbar-lists {
+	display: flex;
+	flex-wrap: wrap;
+	width: 400px;
+	justify-content: space-evenly;
+}
+.navbar-link {
+	display: inline-block;
+	font-size: 1.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	/* color: #fff; */
+	transition: all 0.3s ease;
+}
+.navbar-link:hover {
+	color: crimson;
+}
+
+/* ================================================================
+   !                    MAIN SECTION
+=================================================================== */
+
+.main-section {
+	background: url(https://source.unsplash.com/random/?food) no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 50vh;
+	transition: all 0.7s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main-section .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #ffffff;
+	width: 70%;
+	border-radius: 1.2rem;
+	padding: 1rem;
+}
+.main-section-heading {
+	text-align: left;
+	font-weight: 400;
+	width: 80%;
+}
+.main-section form {
+	margin: 3rem auto;
+	width: 80%;
+}
+.main-section form input {
+	font-size: 1.8rem;
+	width: 100%;
+	padding: 1rem;
+	border: 0.2rem solid #777;
+	outline: none;
+	border-radius: 0.8rem;
+}
+
+/* ================================================================
+   !                    CARD SECTION
+=================================================================== */
+
+.card-section {
+	padding: 5rem;
+}
+.card {
+	width: 300px;
+	height: 400px;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 1.2rem;
+	margin: auto;
+	transition: all 0.3s ease;
+	box-shadow: 1rem 2rem 2rem -1.7rem rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+.card-image img {
+	width: 110%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.5s ease;
+}
+.card-details {
+	height: 15%;
+	width: 100%;
+	padding: 0 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: rgba(219, 8, 8);
+	transition: all 0.3s ease;
+}
+.card-details .card-title {
+	display: inline-block;
+	font-size: 3.5rem;
+	color: #fff;
+}
+.card-details .card-text {
+	display: inline-block;
+	font-size: 2.5rem;
+	color: #fff;
+}
+.card:hover {
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	transform: translateY(-1rem);
+}
+.card:hover .card-image img {
+	transform: scale(1.05);
+}
+
+/* ================================================================
+   !                    FOOTER SECTION
+=================================================================== */
+
+#footer {
+	background-color: #222;
+}
+#footer .container p {
+	text-align: center;
+	padding: 2rem;
+	color: #ccc;
+}
